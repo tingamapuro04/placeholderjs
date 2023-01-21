@@ -14,7 +14,7 @@ const Posts = () => {
                 <p>{post.id}</p>
                 <h2>{post.title.substr(0, 10).toUpperCase()}</h2>
                 <p>{post.body.substr(0, 150)}</p>
-                <button value={post.id} onClick={fetchPhoto(post.id)}>Checkout</button>
+                {/* <button value={post.id} onClick={fetchPhoto(post.id)}>Checkout</button> */}
               </div>
             </li>
           );

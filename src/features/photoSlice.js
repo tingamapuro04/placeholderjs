@@ -37,5 +37,5 @@ const photoSlice = createSlice({
 })
 
 export  {getPhoto}
-const photo = getPhoto.reducer;
+const photo = photoSlice.reducer;
 export default photo
