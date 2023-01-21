@@ -1,16 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const getPhoto = (id) => {
-  const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
-  createAsyncThunk(
-    'Photo',
-    async () => {
-      return fetch(url)
-        .then(data => data.json())
-        .catch(err => console.log(err))
-    }
-  )
-}
+
+const url = `https://jsonplaceholder.typicode.com/posts/${1}`;
+const getPhoto = createAsyncThunk(
+  'Photo',
+  async () => {
+    return fetch(url)
+      .then(data => data.json())
+      .catch(err => console.log(err))
+  }
+)
+
 
 const initialState = {
   isLoading: true,
