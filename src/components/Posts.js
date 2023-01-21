@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import './Post.scss'
-import { getPhoto } from '../features/photoSlice';
+import Post from './Post1';
 
 const Posts = () => {
   const posts = useSelector(state => state.data.photos)
   const dispatch = useDispatch()
 
-  const fetchPhoto = (id) => {
-    // dispatch(getPhoto())
-  }
-
-
   return (
     <div>
+      
       <ul className='items'>
         {posts.map((post) => {
           return (
@@ -22,7 +18,7 @@ const Posts = () => {
                 <p>{post.id}</p>
                 <h2>{post.title.substr(0, 10).toUpperCase()}</h2>
                 <p>{post.body.substr(0, 150)}</p>
-                <button onClick={fetchPhoto(post.id)}>Checkout</button>
+                <button onClick={console.log('popo')}>Checkout</button>
               </div>
             </li>
           );
